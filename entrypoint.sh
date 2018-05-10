@@ -45,4 +45,4 @@ if [[ ${DO_CHOWN} != 0 ]]; then
   done
 fi
 
-exec sudo -u utorrent -g utorrent -- "$@"
+exec -u utorrent -g utorrent -- "$@"
