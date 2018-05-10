@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:xenial
 MAINTAINER TheCreatorzOne
 
 RUN apt-get clean && apt-get update && apt-get install -y locales
