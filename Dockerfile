@@ -12,6 +12,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     adduser --uid 1000 --ingroup utorrent --home /utorrent --shell /bin/bash --disabled-password --gecos "" utorrent && \
     apt-get update && \
     apt-get install -y locales curl && \
+    sudo apt-get update && \
+    sudo apt-get install libssl1.0.0 && libssl-dev && \
     locale-gen en_US.UTF-8 && \
     locale && \
     curl -SL http://download-hr.utorrent.com/track/beta/endpoint/utserver/os/linux-x64-ubuntu-13-04 | \
