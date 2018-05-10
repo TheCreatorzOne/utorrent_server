@@ -1,9 +1,10 @@
 FROM ubuntu
 MAINTAINER TheCreatorzOne
 
-ENV LC_ALL en_US.UTF-8
+RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8  
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     addgroup --gid 1000 utorrent && \
@@ -24,7 +25,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     touch /utorrent/utserver.log && \
     ln -sf /dev/stdout /utorrent/utserver.log && \
     chown -R utorrent:utorrent /utorrent
- 
+
 ADD entrypoint.sh /utorrent/entrypoint.sh
 ADD utserver.conf /utorrent/utserver.conf
 
