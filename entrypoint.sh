@@ -45,4 +45,5 @@ if [[ ${DO_CHOWN} != 0 ]]; then
   done
 fi
 
-exec -u utorrent -g utorrent -- "$@"
+#exec -u utorrent -g utorrent -- "$@"
+exec "$@" su utorrent
