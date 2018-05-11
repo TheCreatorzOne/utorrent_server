@@ -35,7 +35,7 @@ RUN chown utorrent:utorrent /utorrent/entrypoint.sh && \
     chmod 755 /utorrent/entrypoint.sh
 
 VOLUME ["/utorrent/settings", "/utorrent/data"]
-EXPOSE 8080 6882
+EXPOSE 8080 6881
 
 WORKDIR /utorrent
 
